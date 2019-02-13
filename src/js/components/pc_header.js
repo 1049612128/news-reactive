@@ -20,6 +20,7 @@ const TabPane =Tabs.TabPane;
         this.setState({modalVisible:value});
     }
     handleClick(e){
+        console.log(e)
         if(e.key="register"){
             this.setState({current:'rigister'});
             this.setModalVisible(true)
@@ -35,7 +36,7 @@ const TabPane =Tabs.TabPane;
         }
         var formData =this.props.form.getFieldsValue()
         console.log(formData)
-        fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=register&username=userName&password=password&r_userName="+formData.r_userName+"&r_password="+formData.r_password+"&r_confirmPassword="+formData.r_confirmPassword,myFetchOptions).then(response=>response.json()).then(json=>{
+        fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=register&r_userName="+formData.r_userName+"&r_password="+formData.r_password+"&r_confirmPassword="+formData.r_confirmPassword,myFetchOptions).then(response=>response.json()).then(json=>{
             this.setState({userNickName:json.NickUserNane,userid:json.UserId});
         })
         message.success("请求成功！");
