@@ -24,9 +24,7 @@
 .ant-menu-horizontal>.ant-menu-item>a, .ant-menu-horizontal>.ant-menu-submenu>a {
     display: inline-block !important;
 }
-.ant-tabs-nav-wrap{
-    line-height:42px;
-}
+
 .container{
   padding-top: 10px;
 }
@@ -423,7 +421,9 @@ iframe {
     border-top: 0 none;
     font-size: .34rem
 }
-
+.ant-tabs-nav-wrap{
+    height:42px;
+}
 .article-content .app-download img {
     position: absolute;
     width: .42rem;
