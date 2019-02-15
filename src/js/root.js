@@ -8,6 +8,7 @@ import MobileIndex from './components/mobile_index'
 import PCNewsDetails from './components/pc_news_details'
 import MediaQuery from 'react-responsive';
 import MobileNewsDetails from './components/mobile_new_details'
+import pcUserCenter from './components/pc_usercenter'
 export default class Root extends React.Component {
 	render() {
 		return (
@@ -16,6 +17,7 @@ export default class Root extends React.Component {
 				<Router history={hashHistory}>
 					<Route path="/" component={PCIndex}></Route>
 					<Route path="/details/:uniquekey" component={PCNewsDetails}></Route>
+					<Route path="/usercenter" component={pcUserCenter}></Route>
 				</Router>
 				</MediaQuery>
 				<MediaQuery query='(max-device-width: 1224px)'>
